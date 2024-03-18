@@ -1,0 +1,120 @@
+/*Ganz nach: https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/*/
+/* :root {
+  font-size: calc(1rem + 0.25vw);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: larger;
+}
+
+/* html{
+    font-size: 62.5%;   1rem=10px
+} */
+
+main {
+  min-height: 100dvh;
+  padding-block-start: 2rem;
+  padding-inline: 1rem;
+  background-image: radial-gradient(
+    circle,
+    #f0f8fd,
+    #e3f2fb,
+    #d7ecf9,
+    #cae6f7,
+    #bde0f5,
+    #b4dcf4,
+    #abd8f2,
+    #a2d4f1,
+    #9cd1f0,
+    #95cdef,
+    #8fcaee,
+    #88c6ed
+  );
+}
+
+.window {
+  width: 550px; /*without this the width is flexible. The hight is fixed*/
+
+  display: grid;
+  grid-template-columns: 550px;
+  grid-template-rows: 35px 170px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  box-shadow: -1.1px -1.1px 0px 1px white, 1px 1px 0px 1.2px black;
+
+  /*to fitt with the children rounded corners*/
+  border-radius: 4px;
+}
+
+.titlebar {
+  grid-area: 1 / 1 / 2 / 2;
+  background-image: linear-gradient(to right, #0b246e, #2e4b91, #5074b3, #769ed4, #a2caf4);
+  border-radius: 4px 4px 0px 0px;
+  align-items: center;
+
+  border-bottom: 1px solid #3b548b;
+
+  /*instead of text padding-top: 10px;*/
+  display: grid;
+  align-items: center;
+
+  & > p {
+    padding-left: 20px;
+    color: white;
+    font-weight: 910;
+    font-size: 16px;
+  }
+}
+
+.wrapper {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.mainwindow {
+  background-color: #c0c0c0;
+  height: 170px;
+  display: grid;
+  grid-template-columns: 25px 55px 30px 315px 90px 35px;
+  grid-template-rows: 25px 55px 20px 40px 30px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  border-radius: 0px 0px 4px 4px;
+
+  align-items: center;
+  justify-items: center;
+}
+.mainwindow > img {
+  grid-area: 2 / 2 / 3 / 3;
+  filter: drop-shadow(4px 4px grey);
+}
+.mainwindow > p {
+  grid-area: 2 / 4 / 3 / 6;
+  font-size: 0.91rem;
+  font-weight: 500;
+}
+.mainwindow > button {
+  grid-area: 4 / 5 / 5 / 6;
+
+  background-color: #c0c0c0;
+  border-color: white black black white;
+  border-style: solid;
+  border-width: 3px;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 40px;
+  width: 90px;
+
+  &:active {
+    border-color: black white white black;
+    transform: translateY(2px);
+  }
+}
