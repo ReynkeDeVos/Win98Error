@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
 }
 
@@ -19,21 +19,8 @@ main {
   min-height: 100dvh;
   padding-block-start: 2rem;
   padding-inline: 1rem;
-  background-image: radial-gradient(
-    circle,
-    #f0f8fd,
-    #e3f2fb,
-    #d7ecf9,
-    #cae6f7,
-    #bde0f5,
-    #b4dcf4,
-    #abd8f2,
-    #a2d4f1,
-    #9cd1f0,
-    #95cdef,
-    #8fcaee,
-    #88c6ed
-  );
+  background-image: url(./2zWEQTXrsDTLogc0jZFkglVY2Z26x0WOGRsGgzN9nH4.webp);
+  background-size: cover;
 }
 
 .window {
